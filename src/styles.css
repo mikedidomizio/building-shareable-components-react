@@ -1,0 +1,21 @@
+
+body {
+  font-family: Arial;
+}
+
+nav a {
+  margin: 0 5px;
+}
+
+label,
+input {
+  display: block;
+}
+
+label {
+  margin-bottom: 20px;
+}
+
+.body {
+  background-color: #ccc;
+}
