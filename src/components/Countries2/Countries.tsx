@@ -1,4 +1,8 @@
-export const Countries = ({ countries }: any) => {
+import {useCountries} from "../Providers/Countries/useCountries";
+
+export const Countries = () => {
+  const { countries } = useCountries()
+
   return (
     <>
       {countries.map((country: any) => {

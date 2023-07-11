@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import {GET_CONTINENTS_BY_CODE} from "../../apollo/continents";
 
-import { LocationsProvider } from "../LocationsProvider/LocationsProvider";
+import { ContinentsProvider } from "../Providers/Continents/ContinentsProvider";
 import { Continents } from "./Continents";
 
 export const Locations = () => {
@@ -18,9 +18,8 @@ export const Locations = () => {
   if (error) return <p>Error : {error.message}</p>;
 
   return (
-    <LocationsProvider value={data}>
-      List of continents and countries/languages
+    <ContinentsProvider value={data}>
       <Continents />
-    </LocationsProvider>
+    </ContinentsProvider>
   );
 };

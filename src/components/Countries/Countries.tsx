@@ -1,5 +1,5 @@
 import { Languages } from "./Languages";
-import {useCountries} from "../CommonCountries/useCountries";
+import {useCountries} from "../Providers/Countries/useCountries";
 
 export const Countries = () => {
   const { countries, removeCountry } = useCountries()
