@@ -19,7 +19,7 @@ export const Locations = () => {
 
   return (
     <LocationsProvider value={data}>
-      List of continents and countries/languages/currencies
+      List of continents and countries/languages
       <Continents />
     </LocationsProvider>
   );

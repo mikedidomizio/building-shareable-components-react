@@ -1,13 +1,13 @@
 import * as React from "react";
 import {CountriesContext} from "../LocationsProvider/LocationsProvider";
 
-export const useRemoveCountry = () => {
+export const useCountries = () => {
   const context = React.useContext(CountriesContext);
   if (context === undefined || context === null) {
     throw new Error("Must be used within a CountriesProvider");
   }
 
-  return (countryName: string) => {
+  const removeCountry = (countryName: string) => {
     context.setState((state: any) => {
       // this really only works because we added filtering to our query and have one continent
       // for demo purposes it shouldn't really matter
@@ -23,5 +23,10 @@ export const useRemoveCountry = () => {
         }],
       }
     })
+  }
+
+  return {
+    countries: context.state.continents[0].countries,
+    removeCountry,
   }
 }

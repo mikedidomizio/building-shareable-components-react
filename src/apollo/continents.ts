@@ -8,6 +8,8 @@ export const GET_CONTINENTS_BY_CODE = gql`
       countries {
         name
         capital
+        emoji
+        emojiU
         currency
         languages {
           name
